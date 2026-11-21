@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#070b1a">
+<meta name="description" content="جامعة بيت هيثم للدراسة: شروحات ودروس لجميع صفوف الابتدائية والمتوسطة والإعدادية.">
+<title>جامعة بيت هيثم للدراسة</title>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b1a;--bg2:#0d1430;--card:#111a3a;--line:#243063;--gold:#e8b84a;--gold2:#ffe08a;--text:#f4f1e8;--muted:#a9b0cf;--sc:#3ddc97}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:Cairo,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(50% 40% at 85% 0,rgba(232,184,74,.18),transparent 70%),radial-gradient(60% 50% at 0 30%,rgba(70,100,255,.22),transparent 70%)}
+h1,h2,h3.t,.brand b{font-family:Amiri,Cairo,serif}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.wrap{width:min(1100px,92%);margin:auto}
+.top{position:sticky;top:0;z-index:20;background:rgba(7,11,26,.86);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand b{font-size:1.5rem;display:block;line-height:1.1;color:var(--gold2)}
+.brand small{color:var(--muted)}
+nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}
+nav a{padding:6px 16px;border-radius:99px;color:var(--muted);white-space:nowrap}
+nav a:hover{background:rgba(255,255,255,.06);color:var(--text)}
+section{padding:60px 0;scroll-margin-top:110px}
+.hero{padding:70px 0 40px;text-align:center}
+.crest{width:104px;height:104px;filter:drop-shadow(0 0 30px rgba(232,184,74,.5));animation:fl 5s ease-in-out infinite alternate}
+@keyframes fl{to{transform:translateY(-8px)}}
+.pill{display:inline-block;margin-top:18px;padding:4px 18px;border:1px solid var(--gold);border-radius:99px;color:var(--gold2);font-size:.9rem}
+h1{font-size:clamp(2.6rem,9vw,5rem);line-height:1.15;margin-top:10px;background:linear-gradient(90deg,#fff,var(--gold2) 50%,var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--muted);font-size:1.2rem;max-width:620px;margin:14px auto 0}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 28px;border-radius:14px;border:1px solid var(--gold);font-weight:800;background:linear-gradient(135deg,var(--gold2),var(--gold));color:#1b1405;display:inline-block}
+.btn.o{background:none;color:var(--text);border-color:var(--line)}
+.stats{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}
+.stats div{min-width:130px;padding:14px 20px;border:1px solid var(--line);border-radius:18px;background:rgba(255,255,255,.03)}
+.stats b{display:block;font-family:Amiri,serif;font-size:2rem;color:var(--gold2);line-height:1.2}
+.stats small{color:var(--muted)}
+.sh{margin-bottom:22px}
+.sh h2{font-size:clamp(1.9rem,5vw,2.8rem);line-height:1.3}
+.sh p{color:var(--muted)}
+.stg{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+.st{text-align:start;padding:26px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,var(--card),var(--bg2));border-top:4px solid var(--c);transition:transform .2s,border-color .2s}
+.st:hover{transform:translateY(-4px)}
+.st.on{border-color:var(--c);box-shadow:0 0 0 1px var(--c),0 16px 50px -20px var(--c)}
+.st i{font-style:normal;font-size:2.2rem;display:block}
+.st h3{font-family:Amiri,serif;font-size:1.6rem;margin-top:4px}
+.st span{color:var(--muted)}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 14px}
+.chip{padding:8px 18px;border-radius:99px;border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted)}
+.chip.on{background:var(--sc);border-color:var(--sc);color:#07120d;font-weight:800}
+.lb{color:var(--muted);font-weight:600;margin-top:10px}
+.prog{height:10px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:6px 0 4px}
+.prog i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--sc),var(--gold2));transition:width .4s}
+.tg{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:12px;margin-top:18px}
+.tp{padding:16px;border-radius:18px;border:1px solid var(--line);background:var(--card)}
+.tp small{color:var(--muted);display:block}
+.tp h3{font-size:1.05rem;line-height:1.4}
+.tp.d{border-color:var(--sc);opacity:.75}
+.ac{display:flex;gap:8px;align-items:center}
+.go{padding:6px 14px;border-radius:10px;background:rgba(255,255,255,.08);white-space:nowrap;font-size:.9rem}
+.go:hover{background:var(--gold);color:#1b1405}
+.ck{width:34px;height:34px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--muted)}
+.ck[aria-pressed=true]{background:var(--sc);border-color:var(--sc);color:#07120d}
+.ty{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px;align-items:center}
+.ty a{padding:4px 14px;border-radius:99px;background:rgba(255,255,255,.08);font-size:.88rem}
+.ty a:hover{background:var(--gold);color:#1b1405}
+.ty a.d{background:var(--sc);color:#07120d;font-weight:800}
+.rs{margin-inline-start:auto;width:30px;height:30px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--muted)}
+.vg{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.vd{border:1px solid var(--line);border-radius:18px;overflow:hidden;background:var(--card);text-align:start;padding:0;display:block;width:100%}
+.vd img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block;background:#000}
+.vd div{padding:12px 14px}
+.vd small{color:var(--muted)}
+.emp{padding:34px;border:2px dashed var(--line);border-radius:20px;text-align:center;color:var(--muted)}
+.tool{max-width:420px;padding:28px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(160deg,var(--card),var(--bg2));text-align:center}
+.tm{font-family:Amiri,serif;font-size:4.2rem;line-height:1.2;color:var(--gold2);direction:ltr}
+.tool .row{display:flex;gap:10px;justify-content:center;margin-top:12px}
+.tool .btn{padding:8px 22px}
+.md{position:fixed;inset:0;z-index:60;background:rgba(3,5,14,.88);display:grid;place-items:center;padding:14px}
+.md[hidden]{display:none}
+.mb{width:min(900px,100%)}
+.mb iframe{width:100%;aspect-ratio:16/9;border:0;border-radius:16px;background:#000}
+.mb p{margin:10px 0;font-weight:800}
+.mb button{float:inline-end;background:var(--gold);color:#1b1405;border:0;border-radius:10px;padding:6px 18px;font-weight:800}
+footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);text-align:center}
+@media (max-width:640px){section{scroll-margin-top:130px;padding:44px 0}.crest{width:84px;height:84px}}
+@media (prefers-reduced-motion:reduce){.crest{animation:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffe08a"/><stop offset="1" stop-color="#c98f1d"/></linearGradient><symbol id="cr" viewBox="0 0 48 48"><path d="M24 3 42 10v14c0 10-7 17-18 21C13 41 6 34 6 24V10z" fill="url(#gd)"/><path d="M24 14 10 20.5 24 27l14-6.500z" fill="#0a1030"/><path d="M16 25v6c0 2.500 3.600 4.500 8 4.500s8-2 8-4.500v-6l-8 3.700z" fill="#0a1030"/><path d="M38 21v8" stroke="#0a1030" stroke-width="1.800"/></symbol></defs></svg>
+
+<header class="top"><div class="wrap bar">
+  <a class="brand" href="#home"><svg width="46" height="46"><use href="#cr"/></svg><span><b>جامعة بيت هيثم</b><small>للدراسة</small></span></a>
+  <nav aria-label="القائمة"><a href="#stages">المراحل</a><a href="#lib">الدروس</a><a href="#hall">قاعة المدرسين</a><a href="#tools">أدوات المذاكرة</a></nav>
+</div></header>
+
+<main>
+<section class="hero wrap" id="home">
+  <svg class="crest" viewBox="0 0 48 48" aria-hidden="true"><use href="#cr"/></svg><br>
+  <span class="pill">منصة تعليمية لجميع المراحل</span>
+  <h1>جامعة بيت هيثم للدراسة</h1>
+  <p class="lead">تعلّم بخطوات واثقة: شروحات ودروس منظّمة لكل صف، من الابتدائية حتى السادس الإعدادي، وقاعة خاصة لفيديوهات المدرسين.</p>
+  <div class="cta"><a class="btn" href="#stages">ابدأ التعلّم</a><a class="btn o" href="#hall">قاعة المدرسين</a></div>
+  <div class="stats"><div><b>3</b><small>مراحل دراسية</small></div><div><b>12</b><small>صفاً دراسياً</small></div><div><b id="n1">0</b><small>درس وشرح</small></div></div>
+</section>
+
+<section class="wrap" id="stages">
+  <div class="sh"><h2>اختر مرحلتك</h2><p>اضغط على مرحلتك لتظهر صفوفها ودروسها.</p></div>
+  <div class="stg" id="sg"></div>
+</section>
+
+<section class="wrap" id="lib">
+  <div class="sh"><h2>مكتبة الدروس</h2><p>اختر الصف ثم المادة. لكل موضوع خمسة أنواع من الدروس: شرح، وأمثلة، وحل أسئلة، ومراجعة، واختبار. اضغط على أي نوع لتفتح فيديوهاته، وسيُعلَّم تلقائياً لتتابع تقدمك.</p></div>
+  <div class="lb">الصف</div><div class="chips" id="gc"></div>
+  <div class="lb">المادة</div><div class="chips" id="sc"></div>
+  <div class="lb" id="pl"></div><div class="prog"><i id="pb"></i></div>
+  <div class="tg" id="tg"></div>
+</section>
+
+<section class="wrap" id="hall">
+  <div class="sh"><h2>قاعة المدرسين</h2><p id="hp">فيديوهات المدرسين للمرحلة المختارة.</p></div>
+  <div class="vg" id="vg"></div>
+</section>
+
+<section class="wrap" id="tools">
+  <div class="sh"><h2>أدوات المذاكرة</h2><p>طريقة بومودورو: 25 دقيقة تركيز، ثم 5 دقائق راحة.</p></div>
+  <div class="tool"><div id="tl" style="color:var(--muted)">وقت التركيز</div><div class="tm" id="tm">25:00</div>
+    <div class="row"><button class="btn" id="tb">ابدأ</button><button class="btn o" id="tr">إعادة</button></div></div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 جامعة بيت هيثم للدراسة<br><small>عناوين الدروس عامة وقد تختلف أسماؤها حسب الكتاب المقرر. أزرار الدروس تفتح نتائج البحث في يوتيوب.</small></div></footer>
+
+<div class="md" id="md" hidden><div class="mb"><button id="mc">إغلاق ✕</button><p id="mt"></p><div id="mf"></div></div></div>
+
+<script>
+const D={
+p:{n:"الابتدائية",s:"الابتدائي",c:"#3ddc97",i:"🎒",g:["الأول","الثاني","الثالث","الرابع","الخامس","السادس"],t:{"الرياضيات":["الجمع والطرح","الضرب","القسمة","الكسور","الأشكال الهندسية","القياس"],"اللغة العربية":["الحروف والقراءة","القواعد","الإملاء","التعبير","المحفوظات"],"العلوم":["الكائنات الحية","المادة وخواصها","الطاقة","الأرض والفضاء","جسم الإنسان"],"اللغة الإنجليزية":["Alphabet","Numbers","Colors and Shapes","Grammar","Vocabulary"],"التربية الإسلامية":["القرآن الكريم","الأخلاق والآداب","السيرة النبوية","العبادات"],"الاجتماعيات":["الوطن والمواطنة","الخرائط","التاريخ","البيئة"]}},
+m:{n:"المتوسطة",s:"المتوسط",c:"#5ab0ff",i:"📘",g:["الأول","الثاني","الثالث"],t:{"الرياضيات":["الأعداد الصحيحة","الجبر","المعادلات","النسبة والتناسب","الهندسة","الإحصاء"],"العلوم":["الخلية","الطاقة والحركة","الذرة والعناصر","الكهرباء","أجهزة جسم الإنسان"],"اللغة العربية":["النحو","الصرف","البلاغة","الأدب","التعبير"],"اللغة الإنجليزية":["Grammar","Tenses","Reading","Writing","Vocabulary"],"الاجتماعيات":["التاريخ","الجغرافية","الوطن العربي","الخرائط"],"التربية الإسلامية":["القرآن والتجويد","العقيدة","الفقه","السيرة"],"الحاسوب":["أساسيات الحاسوب","الإنترنت","البرمجة للمبتدئين"]}},
+s:{n:"الإعدادية (الثانوية)",s:"الإعدادي",c:"#ffb454",i:"🎓",g:["الرابع","الخامس","السادس"],t:{"الرياضيات":["الدوال","المتجهات","الهندسة التحليلية","المصفوفات","الأعداد المركبة","التفاضل","التكامل"],"الفيزياء":["الميكانيك","الحرارة","الكهربائية","الضوء","الفيزياء الحديثة"],"الكيمياء":["التركيب الذري","الروابط الكيميائية","الكيمياء العضوية","الاتزان الكيميائي","الحوامض والقواعد"],"الأحياء":["الخلية","الوراثة","الجهاز العصبي","التكاثر","التصنيف"],"اللغة العربية":["النحو","الأدب والنصوص","البلاغة","الإملاء والتعبير"],"اللغة الإنجليزية":["Grammar","Reading","Writing","Vocabulary"]}}
+};
+const $=id=>document.getElementById(id);
+const TY=[["شرح","شرح"],["أمثلة","أمثلة محلولة على"],["حل أسئلة","حل أسئلة"],["مراجعة","مراجعة"],["اختبار","اختبار نموذجي"]];
+let st="p",gi=0,sj=Object.keys(D.p.t)[0],VID=[],done={};
+try{done=JSON.parse(localStorage.getItem("bh_done")||"{}")}catch(e){}
+const key=(t)=>[st,gi,sj,t].join("|");
+let total=0;for(const k in D){let c=0;for(const s in D[k].t)c+=D[k].t[s].length;total+=c*D[k].g.length*5}
+$("n1").textContent=total;
+
+function chip(txt,on,fn){const b=document.createElement("button");b.className="chip"+(on?" on":"");b.textContent=txt;b.setAttribute("aria-pressed",on);b.onclick=fn;return b}
+function render(){
+  const S=D[st];document.documentElement.style.setProperty("--sc",S.c);
+  const sg=$("sg");sg.textContent="";
+  for(const k in D){const x=D[k],b=document.createElement("button");b.className="st"+(k==st?" on":"");b.style.setProperty("--c",x.c);b.setAttribute("aria-pressed",k==st);
+    b.innerHTML="<i>"+x.i+"</i><h3 class=t>"+x.n+"</h3><span>"+x.g.length+" صفوف: من "+x.g[0]+" إلى "+x.g[x.g.length-1]+"</span>";
+    b.onclick=()=>{st=k;gi=0;sj=Object.keys(D[k].t)[0];render();go_("lib")};sg.appendChild(b)}
+  const gc=$("gc");gc.textContent="";S.g.forEach((g,i)=>gc.appendChild(chip(g,i==gi,()=>{gi=i;render()})));
+  const sc=$("sc");sc.textContent="";Object.keys(S.t).forEach(s=>sc.appendChild(chip(s,s==sj,()=>{sj=s;render()})));
+  let tot=0,dn=0;for(const s in S.t)S.t[s].forEach(t=>TY.forEach((y,j)=>{tot++;if(done[key2(s,t,j)])dn++}));
+  $("pl").textContent="تقدمك في الصف "+S.g[gi]+" "+S.s+": "+dn+" من "+tot+" درس";$("pb").style.width=(tot?dn/tot*100:0)+"%";
+  const tg=$("tg");tg.textContent="";
+  S.t[sj].forEach(t=>{
+    const a=document.createElement("article");a.className="tp";
+    const sm=document.createElement("small"),h=document.createElement("h3"),ty=document.createElement("div");
+    sm.textContent=sj+" · الصف "+S.g[gi];h.textContent=t;ty.className="ty";
+    TY.forEach((y,j)=>{
+      const k=key2(sj,t,j),l=document.createElement("a");l.target="_blank";l.rel="noopener";
+      l.href="https://www.youtube.com/results?search_query="+encodeURIComponent(y[1]+" "+t+" "+sj+" الصف "+S.g[gi]+" "+S.s);
+      l.textContent=(done[k]?"✓ ":"")+y[0];if(done[k])l.className="d";
+      l.onclick=()=>{done[k]=1;try{localStorage.setItem("bh_done",JSON.stringify(done))}catch(e){}setTimeout(render,50)};
+      ty.appendChild(l);
+    });
+    const r=document.createElement("button");r.className="rs";r.textContent="↺";r.title="مسح تقدم هذا الموضوع";r.setAttribute("aria-label","مسح تقدم هذا الموضوع");
+    r.onclick=()=>{TY.forEach((y,j)=>delete done[key2(sj,t,j)]);try{localStorage.setItem("bh_done",JSON.stringify(done))}catch(e){}render()};
+    ty.appendChild(r);a.append(sm,h,ty);tg.appendChild(a);
+  });
+  hall();
+}
+function key2(s,t,y){return [st,gi,s,t,y].join("|")}
+function vid(u){const m=String(u).match(/(?:youtu\.be\/|v=|embed\/|shorts\/)([\w-]{11})/);return m?m[1]:null}
+function hall(){
+  const box=$("vg");box.textContent="";const S=D[st];
+  const list=VID.filter(v=>v.stage==st&&vid(v.url));
+  $("hp").textContent="فيديوهات المدرسين للمرحلة "+S.n+".";
+  if(!list.length){const e=document.createElement("div");e.className="emp";e.textContent="ستُضاف فيديوهات مدرسي المرحلة "+S.n+" هنا قريباً.";box.appendChild(e);return}
+  list.forEach(v=>{
+    const id=vid(v.url),b=document.createElement("button");b.className="vd";
+    const im=document.createElement("img");im.src="https://i.ytimg.com/vi/"+id+"/hqdefault.jpg";im.alt="";im.loading="lazy";
+    const d=document.createElement("div"),h=document.createElement("b"),s=document.createElement("small");
+    h.textContent=v.title||"فيديو";s.textContent=[v.teacher,v.subject,v.grade&&"الصف "+v.grade].filter(Boolean).join(" · ");
+    d.append(h,document.createElement("br"),s);b.append(im,d);b.onclick=()=>play(id,v.title);box.appendChild(b)});
+}
+function play(id,t){
+  $("mt").textContent=t||"";const f=document.createElement("iframe");
+  f.src="https://www.youtube-nocookie.com/embed/"+id+"?autoplay=1&rel=0";f.allow="autoplay; encrypted-media; fullscreen";f.allowFullscreen=true;f.title=t||"فيديو";
+  $("mf").textContent="";$("mf").appendChild(f);$("md").hidden=false;
+}
+function closeM(){$("md").hidden=true;$("mf").textContent=""}
+$("mc").onclick=closeM;$("md").onclick=e=>{if(e.target.id=="md")closeM()};
+addEventListener("keydown",e=>{if(e.key=="Escape")closeM()});
+function go_(id){$(id).scrollIntoView({behavior:"smooth"})}
+document.addEventListener("click",e=>{const a=e.target.closest('a[href^="#"]');if(!a)return;const t=$(a.getAttribute("href").slice(1));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:"smooth"})});
+
+/* مؤقت المذاكرة */
+let work=true,left=1500,iv=null;
+const fm=s=>String(Math.floor(s/60)).padStart(2,"0")+":"+String(s%60).padStart(2,"0");
+function show(){$("tm").textContent=fm(left);$("tl").textContent=work?"وقت التركيز":"وقت الراحة";$("tb").textContent=iv?"إيقاف مؤقت":"ابدأ"}
+$("tb").onclick=()=>{if(iv){clearInterval(iv);iv=null}else iv=setInterval(()=>{left--;if(left<=0){work=!work;left=work?1500:300}show()},1000);show()};
+$("tr").onclick=()=>{clearInterval(iv);iv=null;work=true;left=1500;show()};
+
+render();show();
+fetch("videos.json?v="+Date.now(),{cache:"no-store"}).then(r=>r.json()).then(d=>{if(Array.isArray(d)){VID=d;hall()}}).catch(()=>{});
+</script>
+</body>
+</html>
